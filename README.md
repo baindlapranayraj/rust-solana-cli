@@ -2,35 +2,41 @@
 
 ## Overview
 
-<p> This Rust program interacts with the Solana blockchain, allowing users to generate a keypair, request airdrops of SOL tokens, and check their account balance. It connects to the Solana Devnet and provides a simple command-line interface for user interaction.
-</p>
+This Rust program interacts with the Solana blockchain, allowing users to:
 
-## Features 
-<li>Generate a new keypair or use an existing public key.</li>
-<li>Request an airdrop of SOL tokens.</li>
-<li>Check the current balance of the specified account.</li>
+- Generate a keypair
+- Request airdrops of SOL tokens
+- Check their account balance
+
+It connects to the Solana Devnet and provides a simple CLI interface for these functions.
+
+## Features
+
+- Generate a new keypair or use an existing public key.
+- Request an airdrop of SOL tokens.
+- Check the current balance of the specified account.
 
 ## Prerequisites
 
-<li>Rust installed on your machine. You can install it from rust-lang.org.</li>
-<li>Access to the Solana blockchain (this program connects to the Devnet).</li>
+- Rust installed on your machine. You can install it from [rust-lang.org](https://www.rust-lang.org/).
+- Access to the Solana blockchain (this program connects to the Devnet).
 
 ## Usage Instructions
 
 1. **Public Key Input**
-- When prompted, specify whether you have an existing public key.
-  - Type `yes` to input your public key.
-  - Type `no` to generate a new keypair.
+   - When prompted, specify whether you have an existing public key.
+     - Type `yes` to input your public key.
+     - Type `no` to generate a new keypair.
 
 2. **Airdrop SOL**
-- Choose option `1` to request an airdrop.
-- Enter the amount of SOL you wish to request (between 0 and 1).
+   - Choose option `1` to request an airdrop.
+   - Enter the amount of SOL you wish to request (between 0 and 1).
 
 3. **Check Balance**
-- Choose option `2` to check your current balance.
+   - Choose option `2` to check your current balance.
 
 4. **Exit the Application**
-- Choose option `3` to exit the program.
+   - Choose option `3` to exit the program.
 
 ## Code Explanation
 
@@ -44,24 +50,15 @@ The main function handles user input and provides options for interacting with t
 - **lamports_transaction**: Facilitates transferring SOL between accounts (not used in main flow but available for future use).
 
 ## Example Output
+```
+======================= Welcome to Solana CLI =======================
+ Rpc is connected to devnet by default
+ Do you have a public key? (yes or no): yes
+ Paste your Public-Key: <your_public_key>
 
-======================= Welcome to solana CLI Rpc is connected to devnet by default ======================= <br/>
-<br/>
-Do you have public key ? (yes or no)
-<br/>
-yes
-<br/>
-Paste your Public-Key
-<br/>
-<your_public_key>
-<br/>
-You can choose the options:
-<br/>
-1.Click if you want airdrop solana
-<br/>
-2.Click if you check current balance
-<br/>
-3.Click if you want to exit
-<br/>
+ You can choose the options:
 
-
+ Click if you want an airdrop of Solana
+ Click if you want to check the current balance
+ Click if you want to exit. how to writ this in code
+```
